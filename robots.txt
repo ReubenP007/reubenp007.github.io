@@ -1,0 +1,7 @@
+# Discoverability is OFF by default while this site is private / under review.
+# To let search engines and recruiters find it, change the two lines below to:
+#   User-agent: *
+#   Disallow:
+# and delete the <meta name="robots" content="noindex"> line in index.html.
+User-agent: *
+Disallow: /
