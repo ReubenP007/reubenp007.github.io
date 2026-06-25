@@ -26,3 +26,14 @@ Thumbs.db
 *.swp
 .idea/
 *.Zone.Identifier
+# --- Private job-search data must NEVER be committed to this PUBLIC repo ---
+# Real boundary is the separate ~/personal/jobsearch-private repo; this is a
+# backstop in case a file lands here by accident. Add more names as needed.
+private/
+applications/
+cover-letters/
+cover_letters/
+recruiters/
+offers/
+salary*
+*.private
