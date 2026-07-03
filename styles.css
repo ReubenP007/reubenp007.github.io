@@ -1018,6 +1018,56 @@ a.contact:hover .ico { color: var(--amber); }
 }
 .videoframe__caption strong { color: var(--muted); font-weight: 600; letter-spacing: .14em; }
 
+/* ---------- Brand marquee ------------------------------------------------- */
+.marquee {
+  margin-top: 1.4rem;
+  border: 1px solid var(--border);
+  padding: 1.2rem 0 1.4rem;
+  overflow: hidden;
+}
+.marquee .wordmarks__label {
+  display: block;
+  padding: 0 1.6rem;
+  margin-bottom: 1.1rem;
+}
+.marquee__viewport {
+  overflow: hidden;
+  -webkit-mask-image: linear-gradient(90deg, transparent, #000 10%, #000 90%, transparent);
+  mask-image: linear-gradient(90deg, transparent, #000 10%, #000 90%, transparent);
+}
+.marquee__track {
+  display: flex;
+  width: max-content;
+  animation: marquee 30s linear infinite;
+}
+.marquee:hover .marquee__track { animation-play-state: paused; }
+.marquee__group { display: flex; gap: 14px; padding-right: 14px; }
+@keyframes marquee { to { transform: translateX(-50%); } }
+@media (prefers-reduced-motion: reduce) {
+  .marquee__track { animation: none; }
+  .marquee__viewport { overflow-x: auto; -webkit-mask-image: none; mask-image: none; }
+}
+.brandtile {
+  flex: none;
+  width: 180px;
+  height: 72px;
+  border: 1px solid var(--border-strong);
+  border-radius: var(--radius);
+  background: var(--bg-2);
+  display: grid;
+  place-items: center;
+}
+.brandtile img {
+  height: 30px;
+  max-width: 130px;
+  width: auto;
+  filter: grayscale(1) invert(1);
+  opacity: .8;
+}
+.brandtile img.brandtile__tall { height: 38px; }
+.brandtile img.brandtile__pad { height: 62px; }
+.brandtile img.brandtile__noinvert { filter: grayscale(1) brightness(1.15); }
+
 /* ---------- Reveal on scroll (progressive enhancement) ------------------ */
 @media (prefers-reduced-motion: no-preference) {
   .js [data-reveal] {
@@ -1085,7 +1135,7 @@ a.contact:hover .ico { color: var(--amber); }
   .stats { grid-template-columns: repeat(4, 1fr); margin-bottom: 1.2rem; }
   .modules { grid-template-columns: repeat(3, 1fr); }
   .stat, .module { border: 1px solid #ccc; }
-  .nudge, .guides, .gallery, .wordmarks, .videoframe, .pagehead__rule { display: none !important; }
+  .nudge, .guides, .gallery, .wordmarks, .videoframe, .marquee, .pagehead__rule { display: none !important; }
   .pagehead { margin: 0; padding: 0 0 .6rem; }
   .pagehead__title { font-size: 20pt; }
   .stat { padding: .6rem .8rem; }
