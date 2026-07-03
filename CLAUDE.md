@@ -20,10 +20,22 @@ All private job-search data lives in a **separate local-only repo**:
 backstop — but the real boundary is the separate repo. Don't rely on the backstop.
 
 ## Structure
-- `index.html` — the site (currently a stub)
+Multi-page static site, guided tour order: education → experience → about →
+engine → film → capabilities → cv.
+- `index.html` — landing (hero + tour cards)
+- `education.html` / `experience.html` / `about.html` / `engine.html`
+  / `film.html` / `capabilities.html` — one page per category
+- `cv.html` — the printable one-pager (print stylesheet renders a light PDF CV)
+- `styles.css` / `script.js` — shared, no build step
+- `assets/fonts/` — self-hosted variable woff2 (Space Grotesk, Inter, JetBrains Mono)
+- `assets/work/` — product screenshots (confidential chrome cropped; get Team5pm
+  sign-off before publishing)
 - `README.md` — public-facing readme
 - `.env.example` — placeholder only; real secrets go in an untracked `.env`
 - `.gitignore` — secrets + private-data backstop
+
+Copy rule: no em dashes in site copy or public source comments (owner prefers
+it not read as AI-written). Stats on the site must be user-verified numbers.
 
 ## Secret hygiene
 A shared pre-commit secret guard (`~/personal/.githooks/pre-commit`, wired via

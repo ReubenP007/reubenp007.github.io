@@ -1,4 +1,4 @@
-/* Progressive enhancement only — the page is fully readable without JS.
+/* Progressive enhancement only. The page is fully readable without JS.
    - Assembles the contact email at runtime so the plaintext address isn't
      sitting in the static HTML for scrapers (a <noscript> fallback is shown).
    - Wires the "Save as PDF" buttons to the browser print dialog.

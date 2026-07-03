@@ -1,5 +1,5 @@
 /* ===========================================================================
-   Reuben Potgieter — CV / portfolio
+   Reuben Potgieter · CV / portfolio
    Cinematic × systems. Plain CSS, no build step. Dark by design; print = light.
    =========================================================================== */
 
@@ -160,6 +160,7 @@ a:hover { text-decoration: underline; }
   padding: .4rem .65rem;
 }
 .topnav__links a:hover { color: var(--amber); text-decoration: none; }
+.topnav__links a.is-active { color: var(--amber); }
 .topnav__pdf { margin-left: auto; }
 
 /* ---------- Buttons ----------------------------------------------------- */
@@ -522,7 +523,6 @@ a.contact:hover .ico { color: var(--amber); }
 /* ---------- Modules ----------------------------------------------------- */
 .modules {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
   gap: 1px;
   background: var(--border);
   border: 1px solid var(--border);
@@ -557,19 +557,10 @@ a.contact:hover .ico { color: var(--amber); }
   color: var(--muted);
   line-height: 1.6;
 }
-.module--filler {
-  background:
-    repeating-linear-gradient(-45deg, var(--border) 0 1px, transparent 1px 9px),
-    var(--bg-2);
-  display: grid;
-  align-items: end;
-}
-.module__filler-label {
-  font-family: var(--font-mono);
-  font-size: .64rem;
-  letter-spacing: .22em;
-  color: var(--faint);
-}
+/* 10 modules: column counts chosen so the grid always fills evenly (5/2/1) */
+.modules { grid-template-columns: repeat(5, 1fr); }
+@media (max-width: 1100px) { .modules { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 560px) { .modules { grid-template-columns: 1fr; } }
 
 /* ---------- Clients ----------------------------------------------------- */
 .clients {
@@ -784,6 +775,204 @@ a.contact:hover .ico { color: var(--amber); }
 }
 .foot__note { color: var(--faint); }
 
+/* ---------- Page header (subpages) --------------------------------------- */
+.pagehead {
+  max-width: var(--maxw);
+  margin: 0 auto;
+  padding: 4rem 1.5rem 0;
+}
+.pagehead__kicker {
+  margin: 0 0 1rem;
+  font-family: var(--font-mono);
+  font-size: .8rem;
+  letter-spacing: .22em;
+  color: var(--amber);
+  display: flex;
+  align-items: center;
+}
+.pagehead__title {
+  margin: 0;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: clamp(2.4rem, 6vw, 4rem);
+  line-height: 1;
+  letter-spacing: -.01em;
+  text-transform: uppercase;
+}
+.pagehead__note {
+  margin: 1rem 0 0;
+  font-family: var(--font-mono);
+  font-size: .7rem;
+  letter-spacing: .18em;
+  color: var(--faint);
+}
+.pagehead__rule {
+  border: 0;
+  border-top: 1px solid var(--border);
+  margin: 2rem 0 0;
+}
+
+/* ---------- Landing guide cards ------------------------------------------ */
+.guides {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1px;
+  background: var(--border);
+  border: 1px solid var(--border);
+}
+@media (max-width: 900px) { .guides { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 560px) { .guides { grid-template-columns: 1fr; } }
+.guide {
+  position: relative;
+  display: block;
+  background: var(--bg-2);
+  padding: 1.5rem 1.6rem 1.4rem;
+  text-decoration: none;
+  color: var(--text);
+  transition: background-color .2s ease;
+}
+.guide:hover { background: var(--surface-2); text-decoration: none; }
+.guide__num {
+  font-family: var(--font-mono);
+  font-size: .72rem;
+  letter-spacing: .14em;
+  color: var(--amber);
+}
+.guide__title {
+  margin: .5rem 0 .4rem;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 1.25rem;
+  letter-spacing: .02em;
+  text-transform: uppercase;
+}
+.guide p {
+  margin: 0;
+  font-size: .88rem;
+  color: var(--muted);
+  line-height: 1.55;
+  max-width: 34ch;
+}
+.guide__arrow {
+  position: absolute;
+  top: 1.3rem;
+  right: 1.4rem;
+  font-family: var(--font-mono);
+  color: var(--faint);
+  transition: color .2s ease, transform .2s ease;
+}
+.guide:hover .guide__arrow { color: var(--amber); transform: translateX(4px); }
+.guide__tag {
+  position: absolute;
+  bottom: 1.35rem;
+  right: 1.4rem;
+  font-family: var(--font-mono);
+  font-size: .6rem;
+  letter-spacing: .18em;
+  color: var(--amber);
+  border: 1px solid color-mix(in srgb, var(--amber) 40%, transparent);
+  padding: .18rem .45rem;
+}
+
+/* ---------- Next nudge ---------------------------------------------------- */
+.nudge {
+  display: flex;
+  align-items: baseline;
+  gap: 1.2rem;
+  margin-top: 3.2rem;
+  padding: 1.5rem 1.8rem;
+  border: 1px solid var(--border-strong);
+  text-decoration: none;
+  color: var(--text);
+  transition: border-color .2s ease, background-color .2s ease;
+}
+.nudge:hover { border-color: var(--amber); background: var(--amber-soft); text-decoration: none; }
+.nudge__label {
+  font-family: var(--font-mono);
+  font-size: .68rem;
+  letter-spacing: .22em;
+  color: var(--faint);
+}
+.nudge__title {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 1.3rem;
+  letter-spacing: .02em;
+  text-transform: uppercase;
+}
+.nudge__arrow {
+  margin-left: auto;
+  font-family: var(--font-mono);
+  font-size: 1.1rem;
+  color: var(--amber);
+  transition: transform .2s ease;
+}
+.nudge:hover .nudge__arrow { transform: translateX(6px); }
+
+/* ---------- Work gallery -------------------------------------------------- */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.4rem;
+  margin-bottom: 2.6rem;
+}
+@media (max-width: 720px) { .gallery { grid-template-columns: 1fr; } }
+.shot { margin: 0; }
+.shot__frame {
+  position: relative;
+  border: 1px solid var(--border-strong);
+  padding: 8px;
+  background: var(--bg-2);
+}
+.shot__frame::before,
+.shot__frame::after {
+  content: "";
+  position: absolute;
+  width: 14px; height: 14px;
+  border-color: var(--amber);
+  border-style: solid;
+}
+.shot__frame::before { top: -1px; left: -1px; border-width: 2px 0 0 2px; }
+.shot__frame::after { bottom: -1px; right: -1px; border-width: 0 2px 2px 0; }
+.shot__frame img { display: block; width: 100%; height: auto; }
+.shot__caption {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-top: .55rem;
+  font-family: var(--font-mono);
+  font-size: .68rem;
+  letter-spacing: .1em;
+  color: var(--faint);
+}
+.shot__caption strong { color: var(--muted); font-weight: 600; letter-spacing: .14em; }
+
+/* ---------- Client wordmarks ---------------------------------------------- */
+.wordmarks {
+  margin-top: 2.4rem;
+  border: 1px solid var(--border);
+  padding: 1.2rem 1.6rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: .8rem 1.8rem;
+}
+.wordmarks__label {
+  font-family: var(--font-mono);
+  font-size: .62rem;
+  letter-spacing: .2em;
+  color: var(--faint);
+  width: 100%;
+}
+.wordmarks span {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 1rem;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
 /* ---------- Reveal on scroll (progressive enhancement) ------------------ */
 @media (prefers-reduced-motion: no-preference) {
   .js [data-reveal] {
@@ -808,14 +997,16 @@ a.contact:hover .ico { color: var(--amber); }
   .fieldnotes__list { columns: 1; }
 }
 @media (max-width: 620px) {
-  .topnav__links { display: none; }
+  .topnav__inner { padding: .5rem .9rem; gap: .6rem; }
+  .topnav__links a { font-size: .62rem; padding: .3rem .4rem; letter-spacing: .06em; }
+  .topnav__pdf { display: none; }
   .sec__note { display: none; }
   .section { padding: 3rem 1.25rem 1.8rem; }
   .film { padding: 1.4rem 1.3rem; }
 }
 
 /* ===========================================================================
-   Print / PDF — clean, ink-friendly, light, single column, no chrome.
+   Print / PDF: clean, ink-friendly, light, single column, no chrome.
    =========================================================================== */
 @media print {
   :root {
@@ -849,7 +1040,9 @@ a.contact:hover .ico { color: var(--amber); }
   .stats { grid-template-columns: repeat(4, 1fr); margin-bottom: 1.2rem; }
   .modules { grid-template-columns: repeat(3, 1fr); }
   .stat, .module { border: 1px solid #ccc; }
-  .module--filler { display: none; }
+  .nudge, .guides, .gallery, .wordmarks, .pagehead__rule { display: none !important; }
+  .pagehead { margin: 0; padding: 0 0 .6rem; }
+  .pagehead__title { font-size: 20pt; }
   .stat { padding: .6rem .8rem; }
   .stat::before { display: none; }
   .stat__value { font-size: 1.5rem; }
