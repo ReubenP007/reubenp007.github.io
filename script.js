@@ -8,18 +8,17 @@
 (function () {
   'use strict';
 
-  var email = document.getElementById('email-link');
-  if (email) {
+  var emailLinks = document.querySelectorAll('a[data-user][data-domain]');
+  Array.prototype.forEach.call(emailLinks, function (email) {
     var user = email.getAttribute('data-user');
     var domain = email.getAttribute('data-domain');
-    if (user && domain) {
-      var addr = user + '@' + domain;
-      email.setAttribute('href', 'mailto:' + addr);
-      email.removeAttribute('aria-disabled');
-      var label = email.querySelector('.contact-text');
-      if (label) { label.textContent = addr; }
-    }
-  }
+    if (!user || !domain) { return; }
+    var addr = user + '@' + domain;
+    email.setAttribute('href', 'mailto:' + addr);
+    email.removeAttribute('aria-disabled');
+    var label = email.querySelector('.contact-text');
+    if (label) { label.textContent = addr; } else { email.textContent = addr; }
+  });
 
   var printers = document.querySelectorAll('[data-print]');
   Array.prototype.forEach.call(printers, function (btn) {

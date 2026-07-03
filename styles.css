@@ -778,6 +778,12 @@ a.contact:hover .ico { color: var(--amber); }
   color: var(--faint);
 }
 .foot__note { color: var(--faint); }
+.foot__mail {
+  color: var(--muted);
+  text-decoration: none;
+  letter-spacing: .1em;
+}
+.foot__mail:hover { color: var(--amber); text-decoration: none; }
 
 /* ---------- Page header (subpages) --------------------------------------- */
 .pagehead {
