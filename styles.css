@@ -561,6 +561,10 @@ a.contact:hover .ico { color: var(--amber); }
 .modules { grid-template-columns: repeat(5, 1fr); }
 @media (max-width: 1100px) { .modules { grid-template-columns: repeat(2, 1fr); } }
 @media (max-width: 560px) { .modules { grid-template-columns: 1fr; } }
+/* 6-item variant fills evenly at 3/2/1 */
+.modules--three { grid-template-columns: repeat(3, 1fr); }
+@media (max-width: 1100px) { .modules--three { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 560px) { .modules--three { grid-template-columns: 1fr; } }
 
 /* ---------- Clients ----------------------------------------------------- */
 .clients {
@@ -815,12 +819,12 @@ a.contact:hover .ico { color: var(--amber); }
 /* ---------- Landing guide cards ------------------------------------------ */
 .guides {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   gap: 1px;
   background: var(--border);
   border: 1px solid var(--border);
 }
-@media (max-width: 900px) { .guides { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 1000px) { .guides { grid-template-columns: repeat(2, 1fr); } }
 @media (max-width: 560px) { .guides { grid-template-columns: 1fr; } }
 .guide {
   position: relative;

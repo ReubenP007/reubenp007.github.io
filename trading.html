@@ -1,0 +1,267 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Trading · Reuben Potgieter</title>
+  <meta name="description" content="Autonomous algorithmic crypto-trading systems in Python on the Bybit V5 API: built, backtested with walk-forward validation, and deployed live.">
+  <meta name="robots" content="noindex">
+  <meta name="color-scheme" content="dark">
+  <meta name="theme-color" content="#0b0d10">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2064%2064'%3E%3Crect%20width='64'%20height='64'%20rx='8'%20fill='%230b0d10'/%3E%3Crect%20x='4'%20y='4'%20width='56'%20height='56'%20rx='6'%20fill='none'%20stroke='%23f2a33c'%20stroke-width='2'/%3E%3Ctext%20x='32'%20y='42'%20font-family='monospace'%20font-size='26'%20font-weight='700'%20fill='%23f2a33c'%20text-anchor='middle'%3ERP%3C/text%3E%3C/svg%3E">
+  <link rel="preload" href="assets/fonts/space-grotesk-var-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/inter-var-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/jetbrains-mono-var-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <nav class="topnav" aria-label="Site navigation">
+    <div class="topnav__inner">
+      <a class="topnav__brand" href="index.html" aria-label="Reuben Potgieter, home">RP</a>
+      <ul class="topnav__links">
+        <li><a href="education.html">Education</a></li>
+        <li><a href="experience.html">Experience</a></li>
+        <li><a href="engine.html">Engine</a></li>
+        <li><a href="capabilities.html">Capabilities</a></li>
+        <li><a href="trading.html" class="is-active" aria-current="page">Trading</a></li>
+        <li><a href="film.html">Film</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="cv.html">CV</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <header class="pagehead">
+    <p class="pagehead__kicker"><span class="tick" aria-hidden="true"></span>05 · SIX MONTHS IN THE MARKET</p>
+    <h1 class="pagehead__title">Trading</h1>
+    <p class="pagehead__note">PYTHON · BYBIT V5 · BUILT, BACKTESTED, DEPLOYED LIVE</p>
+    <hr class="pagehead__rule">
+  </header>
+
+  <main id="main">
+    <section class="section" aria-label="Algorithmic trading systems">
+      <p class="lede" data-reveal>
+        A fully autonomous algorithmic crypto-trading system, designed, built,
+        backtested and deployed in Python on the Bybit V5 API. It includes a rigorous,
+        data-driven evaluation of LLM-in-the-loop decision-making that led to a
+        deliberate architecture simplification, plus <strong>ReubzEdge</strong>, a
+        commercial market-intelligence product now in development.
+      </p>
+
+      <div class="stats" data-reveal>
+        <div class="stat">
+          <span class="stat__value">12+</span>
+          <span class="stat__label">strategies in the bake-off</span>
+        </div>
+        <div class="stat">
+          <span class="stat__value">730</span>
+          <span class="stat__label">days of backtest window</span>
+        </div>
+        <div class="stat">
+          <span class="stat__value">3.25</span>
+          <span class="stat__label">PnL to max-drawdown ratio (backtested)</span>
+        </div>
+        <div class="stat">
+          <span class="stat__value">24/7</span>
+          <span class="stat__label">live on a Linux VPS via systemd</span>
+        </div>
+      </div>
+
+      <figure class="diagram" data-reveal>
+        <div class="diagram__scroll">
+          <svg class="diagram__svg" viewBox="0 0 960 470" role="img"
+               aria-label="Trading system architecture: Bybit market data flows through a technical-analysis engine into signals, through a risk gate into execution and back to the Bybit V5 API, with Discord alerts for human visibility. A backtest lab promotes strategies only after out-of-sample validation. Claude is used for research only, never live trade decisions.">
+            <defs>
+              <pattern id="bp-grid-t" width="40" height="40" patternUnits="userSpaceOnUse">
+                <path d="M40 0H0v40" fill="none" class="d-grid"/>
+              </pattern>
+              <marker id="arr-t" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+                <path d="M0 0L8 4L0 8z" class="d-arrow"/>
+              </marker>
+            </defs>
+
+            <rect x="1" y="1" width="958" height="468" class="d-frame"/>
+            <rect x="1" y="1" width="958" height="468" fill="url(#bp-grid-t)"/>
+
+            <g class="d-legend">
+              <rect x="30" y="24" width="10" height="10" class="d-sw d-sw--ai"/>
+              <text x="48" y="33">SYSTEM</text>
+              <rect x="120" y="24" width="10" height="10" class="d-sw d-sw--human"/>
+              <text x="138" y="33">HUMAN VISIBILITY</text>
+              <rect x="280" y="24" width="10" height="10" class="d-sw d-sw--data"/>
+              <text x="298" y="33">DATA</text>
+              <text x="930" y="33" text-anchor="end" class="d-legend__id">REUBZ TRADING · SYSTEM MAP</text>
+            </g>
+
+            <!-- row A: live loop -->
+            <g class="d-node d-node--data">
+              <rect x="30" y="70" width="120" height="52" rx="3"/>
+              <text x="90" y="100">MARKET DATA</text>
+            </g>
+            <line x1="150" y1="96" x2="186" y2="96" class="d-flow" marker-end="url(#arr-t)"/>
+            <g class="d-node d-node--ai">
+              <rect x="190" y="70" width="130" height="52" rx="3"/>
+              <text x="255" y="100">TA ENGINE</text>
+            </g>
+            <text x="255" y="138" class="d-sub">EMA 9/21 · RSI-14 · VOLUME SMA</text>
+            <line x1="320" y1="96" x2="356" y2="96" class="d-flow" marker-end="url(#arr-t)"/>
+            <g class="d-node d-node--data">
+              <rect x="360" y="70" width="100" height="52" rx="3"/>
+              <text x="410" y="100">SIGNAL</text>
+            </g>
+            <line x1="460" y1="96" x2="496" y2="96" class="d-flow" marker-end="url(#arr-t)"/>
+            <g class="d-node d-node--ai">
+              <rect x="500" y="70" width="130" height="52" rx="3"/>
+              <text x="565" y="100">RISK GATE</text>
+            </g>
+            <text x="565" y="138" class="d-sub">ATR SL/TP · POSITION CAP · KILL SWITCH</text>
+            <line x1="630" y1="96" x2="666" y2="96" class="d-flow" marker-end="url(#arr-t)"/>
+            <g class="d-node d-node--ai">
+              <rect x="670" y="70" width="120" height="52" rx="3"/>
+              <text x="730" y="100">EXECUTION</text>
+            </g>
+            <line x1="790" y1="96" x2="826" y2="96" class="d-flow" marker-end="url(#arr-t)"/>
+            <g class="d-node d-node--data">
+              <rect x="830" y="70" width="100" height="52" rx="3"/>
+              <text x="880" y="100">BYBIT V5</text>
+            </g>
+
+            <!-- execution down to discord -->
+            <path d="M730 122v64" fill="none" class="d-flow" marker-end="url(#arr-t)"/>
+            <g class="d-node d-node--human">
+              <rect x="650" y="190" width="160" height="52" rx="3"/>
+              <text x="730" y="220">DISCORD ALERTS</text>
+            </g>
+            <text x="730" y="258" class="d-sub">TRADE LIFECYCLE · CUMULATIVE PNL</text>
+
+            <!-- backtest lab feeding the TA engine -->
+            <g class="d-node d-node--ai">
+              <rect x="30" y="190" width="170" height="52" rx="3"/>
+              <text x="115" y="220">BACKTEST LAB</text>
+            </g>
+            <text x="115" y="258" class="d-sub">STRAT_TESTER V5 · WALK-FORWARD FOLDS</text>
+            <path d="M115 190v-30h100v-32" fill="none" class="d-flow" marker-end="url(#arr-t)"/>
+            <text x="240" y="176" class="d-rowlabel">PROMOTED ONLY AFTER OOS VALIDATION</text>
+
+            <!-- the LLM, out of the loop -->
+            <g class="d-node d-node--data">
+              <rect x="280" y="190" width="200" height="52" rx="3"/>
+              <text x="380" y="220">CLAUDE · RESEARCH ONLY</text>
+            </g>
+            <text x="380" y="258" class="d-sub">TESTED IN THE LOOP: -28% TO -36% → REMOVED</text>
+
+            <!-- rails -->
+            <g class="d-rail">
+              <rect x="30" y="330" width="900" height="46" rx="3"/>
+              <text x="48" y="358" class="d-rail__label">INFRA</text>
+              <text x="480" y="358" text-anchor="middle" class="d-rail__items">VULTR VPS · UBUNTU 24.04 · SYSTEMD · API IP WHITELIST · DISCORD WEBHOOKS</text>
+            </g>
+            <g class="d-rail">
+              <rect x="30" y="396" width="900" height="46" rx="3"/>
+              <text x="48" y="424" class="d-rail__label">VALIDATION</text>
+              <text x="480" y="424" text-anchor="middle" class="d-rail__items">70/30 IN / OUT-OF-SAMPLE · TRIPLE-BARRIER R-EXPECTANCY · PLAUSIBILITY BAN LIST</text>
+            </g>
+          </svg>
+        </div>
+        <figcaption class="diagram__caption">
+          Deterministic rules in the live loop; the model stays in research. All strategy
+          figures on this page are backtested and labelled as such. The live account trades
+          a small number of high-conviction setups by design.
+        </figcaption>
+      </figure>
+
+      <h2 class="fieldnotes__title" data-reveal>The LLM verdict</h2>
+      <div class="clients" data-reveal>
+        <article class="client">
+          <header class="client__head">
+            <h3 class="client__name">Direction picker</h3>
+            <span class="client__tag">-28% PNL</span>
+          </header>
+          <p>Claude chose trade direction over 180 days of walk-forward backtests.
+             Result: -28% PnL versus the rules baseline, with a 70% max drawdown.</p>
+        </article>
+        <article class="client">
+          <header class="client__head">
+            <h3 class="client__name">Veto layer</h3>
+            <span class="client__tag">-26% PNL</span>
+          </header>
+          <p>Claude confirmed or vetoed rule-generated signals. It vetoed too many
+             winners and cost 26% versus the baseline.</p>
+        </article>
+        <article class="client">
+          <header class="client__head">
+            <h3 class="client__name">Risk manager</h3>
+            <span class="client__tag">-36% PNL</span>
+          </header>
+          <p>Claude managed open positions. It exited early on normal pullbacks and
+             cost 36% versus the baseline.</p>
+        </article>
+      </div>
+
+      <div class="film" data-reveal>
+        <p class="film__body">
+          Every configuration lost to the pure-rules baseline, so the LLM was removed
+          from the live trading loop entirely and kept for research and tooling only.
+          <strong>The willingness to kill your own clever idea when the data says so
+          is the whole point.</strong> Production is deterministic rules plus
+          notifications; nothing a model says can move money.
+        </p>
+      </div>
+
+      <div class="modules modules--three" data-reveal>
+        <article class="module">
+          <header><span class="module__id">T-01</span><h3 class="module__title">Bot core</h3></header>
+          <p>Single-file Python application, about 1,000 lines, one dependency. A custom
+             HMAC-signed Bybit V5 REST client covering klines, ticker, balances,
+             positions, orders and leverage config.</p>
+        </article>
+        <article class="module">
+          <header><span class="module__id">T-02</span><h3 class="module__title">SQUEEZE strategy</h3></header>
+          <p>Volatility-squeeze breakout on ETHUSDT daily candles. EMA200 trend filter,
+             ATR-based stops (1.5x SL / 3.0x TP), 5x leverage, -10% kill switch. Chosen
+             from a 12+ strategy bake-off.</p>
+        </article>
+        <article class="module">
+          <header><span class="module__id">T-03</span><h3 class="module__title">Backtest framework</h3></header>
+          <p>Parameter sweeps, walk-forward folds, triple-barrier R-expectancy with
+             70/30 out-of-sample splits, and a plausibility ban list that treats
+             too-good-to-be-true metrics as a bug signal.</p>
+        </article>
+        <article class="module">
+          <header><span class="module__id">T-04</span><h3 class="module__title">Risk &amp; execution</h3></header>
+          <p>Multi-field balance parsing for Bybit's quirks, hard position caps, daily
+             PnL tracking, and completed-candle-only analysis so nothing repaints.</p>
+        </article>
+        <article class="module">
+          <header><span class="module__id">T-05</span><h3 class="module__title">Deployment</h3></header>
+          <p>Runs 24/7 as a systemd service on a Vultr VPS (Ubuntu 24.04) with API IP
+             whitelisting and Discord webhooks for the full trade lifecycle.</p>
+        </article>
+        <article class="module">
+          <header><span class="module__id">T-06</span><h3 class="module__title">ReubzEdge</h3></header>
+          <p>In development: a commercial market-intelligence dashboard. Pluggable data
+             adapters, a multi-symbol confluence scanner, and confidence numbers driven
+             by measured historical hit rates, never model opinion.</p>
+        </article>
+      </div>
+
+      <a class="nudge" href="film.html">
+        <span class="nudge__label">NEXT</span>
+        <span class="nudge__title">06 · Film</span>
+        <span class="nudge__arrow" aria-hidden="true">&rarr;</span>
+      </a>
+    </section>
+  </main>
+
+  <footer class="foot">
+    <div class="foot__inner">
+      <p>© <span data-year>2026</span> REUBEN POTGIETER · CAPE TOWN, SOUTH AFRICA</p>
+      <p class="foot__note">BUILT BY HAND · NO FRAMEWORK · NO BUILD STEP</p>
+    </div>
+  </footer>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
