@@ -7,12 +7,15 @@
   <meta name="description" content="Reuben Potgieter — full-stack AI automation &amp; platform engineer. Sole architect of SAMY ENGINE, a production multi-module AI video platform. Cape Town, South Africa.">
   <!-- Discoverability OFF by default. To let recruiters/search find this page, delete the next line AND the Disallow in robots.txt. -->
   <meta name="robots" content="noindex">
-  <meta name="color-scheme" content="light dark">
-  <meta name="theme-color" content="#4f46e5">
+  <meta name="color-scheme" content="dark">
+  <meta name="theme-color" content="#0b0d10">
   <meta property="og:type" content="profile">
   <meta property="og:title" content="Reuben Potgieter — AI Automation &amp; Platform Engineer">
-  <meta property="og:description" content="Sole architect of SAMY ENGINE, a production multi-module AI video platform. Cape Town, South Africa.">
-  <link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2064%2064'%3E%3Crect%20width='64'%20height='64'%20rx='14'%20fill='%234f46e5'/%3E%3Ctext%20x='32'%20y='44'%20font-family='system-ui,sans-serif'%20font-size='34'%20font-weight='700'%20fill='white'%20text-anchor='middle'%3ERP%3C/text%3E%3C/svg%3E">
+  <meta property="og:description" content="From a decade in film to sole architect of SAMY ENGINE — a production, multi-module AI video platform. Cape Town, South Africa.">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2064%2064'%3E%3Crect%20width='64'%20height='64'%20rx='8'%20fill='%230b0d10'/%3E%3Crect%20x='4'%20y='4'%20width='56'%20height='56'%20rx='6'%20fill='none'%20stroke='%23f2a33c'%20stroke-width='2'/%3E%3Ctext%20x='32'%20y='42'%20font-family='monospace'%20font-size='26'%20font-weight='700'%20fill='%23f2a33c'%20text-anchor='middle'%3ERP%3C/text%3E%3C/svg%3E">
+  <link rel="preload" href="assets/fonts/space-grotesk-var-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/inter-var-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/jetbrains-mono-var-latin.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -22,10 +25,11 @@
     <div class="topnav__inner">
       <a class="topnav__brand" href="#top" aria-label="Reuben Potgieter — top of page">RP</a>
       <ul class="topnav__links">
-        <li><a href="#about">About</a></li>
-        <li><a href="#skills">Skills</a></li>
+        <li><a href="#samy">Engine</a></li>
         <li><a href="#experience">Experience</a></li>
-        <li><a href="#projects">Projects</a></li>
+        <li><a href="#skills">Capabilities</a></li>
+        <li><a href="#film">Film</a></li>
+        <li><a href="#about">About</a></li>
         <li><a href="#education">Education</a></li>
       </ul>
       <button type="button" class="btn btn--ghost topnav__pdf" data-print>
@@ -36,79 +40,378 @@
   </nav>
 
   <header class="hero" id="top">
+    <div class="hero__backdrop" aria-hidden="true"></div>
     <div class="hero__inner">
-      <img class="hero__photo" src="assets/profile.jpg" width="160" height="160"
-           alt="Portrait of Reuben Potgieter" loading="eager" decoding="async">
       <div class="hero__intro">
-        <h1 class="hero__name">Reuben Potgieter</h1>
-        <p class="hero__title">AI Automation &amp; Platform Engineer</p>
+        <p class="hero__kicker"><span class="tick" aria-hidden="true"></span>AI Automation &amp; Platform Engineer</p>
+        <h1 class="hero__name">Reuben<br>Potgieter</h1>
         <p class="hero__tagline">
-          Full-stack AI automation &amp; platform engineer. Sole architect of
-          <strong>SAMY&nbsp;ENGINE</strong> — a production, multi-module AI video platform
-          serving internal teams and external media clients.
+          From a decade in film to sole architect of <strong>SAMY&nbsp;ENGINE</strong> —
+          a production, multi-module AI video platform serving internal teams and
+          external media clients.
         </p>
 
         <ul class="contacts" aria-label="Contact and links">
           <li>
             <a id="email-link" class="contact" href="#" aria-disabled="true" rel="noopener"
                data-user="reubenpotgieter007" data-domain="gmail.com">
-              <svg class="ico" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M4 4h16a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2zm8 7L4 6.5V6l8 4.5L20 6v.5L12 11z"/></svg>
+              <svg class="ico" width="16" height="16" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M4 4h16a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2zm8 7L4 6.5V6l8 4.5L20 6v.5L12 11z"/></svg>
               <span class="contact-text">Email</span>
             </a>
             <noscript><span class="contact contact--static">reubenpotgieter007 [at] gmail [dot] com</span></noscript>
           </li>
           <li>
             <a class="contact" href="https://github.com/ReubenP007" rel="noopener" target="_blank">
-              <svg class="ico" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2a10 10 0 0 0-3.16 19.49c.5.09.68-.22.68-.48v-1.7c-2.78.6-3.37-1.34-3.37-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.61.07-.61 1 .07 1.53 1.03 1.53 1.03.9 1.53 2.36 1.09 2.94.83.09-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.94 0-1.09.39-1.98 1.03-2.68-.1-.25-.45-1.27.1-2.65 0 0 .84-.27 2.75 1.02a9.5 9.5 0 0 1 5 0c1.91-1.29 2.75-1.02 2.75-1.02.55 1.38.2 2.4.1 2.65.64.7 1.03 1.59 1.03 2.68 0 3.84-2.34 4.69-4.57 4.94.36.31.68.92.68 1.85v2.74c0 .27.18.58.69.48A10 10 0 0 0 12 2z"/></svg>
+              <svg class="ico" width="16" height="16" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2a10 10 0 0 0-3.16 19.49c.5.09.68-.22.68-.48v-1.7c-2.78.6-3.37-1.34-3.37-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.61.07-.61 1 .07 1.53 1.03 1.53 1.03.9 1.53 2.36 1.09 2.94.83.09-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.94 0-1.09.39-1.98 1.03-2.68-.1-.25-.45-1.27.1-2.65 0 0 .84-.27 2.75 1.02a9.5 9.5 0 0 1 5 0c1.91-1.29 2.75-1.02 2.75-1.02.55 1.38.2 2.4.1 2.65.64.7 1.03 1.59 1.03 2.68 0 3.84-2.34 4.69-4.57 4.94.36.31.68.92.68 1.85v2.74c0 .27.18.58.69.48A10 10 0 0 0 12 2z"/></svg>
               <span>github.com/ReubenP007</span>
             </a>
           </li>
           <li>
             <a class="contact" href="https://za.linkedin.com/in/reuben-potgieter" rel="noopener" target="_blank">
-              <svg class="ico" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2zM8.34 18.34V9.99H5.67v8.35zM7 8.8a1.55 1.55 0 1 0 0-3.1 1.55 1.55 0 0 0 0 3.1zm11.34 9.54v-4.58c0-2.45-1.31-3.59-3.06-3.59-1.41 0-2.04.78-2.39 1.32v-1.13h-2.67c.04.75 0 8.35 0 8.35h2.67v-4.66c0-.24.02-.48.09-.65.19-.48.63-.98 1.36-.98.96 0 1.34.73 1.34 1.8v4.49z"/></svg>
+              <svg class="ico" width="16" height="16" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2zM8.34 18.34V9.99H5.67v8.35zM7 8.8a1.55 1.55 0 1 0 0-3.1 1.55 1.55 0 0 0 0 3.1zm11.34 9.54v-4.58c0-2.45-1.31-3.59-3.06-3.59-1.41 0-2.04.78-2.39 1.32v-1.13h-2.67c.04.75 0 8.35 0 8.35h2.67v-4.66c0-.24.02-.48.09-.65.19-.48.63-.98 1.36-.98.96 0 1.34.73 1.34 1.8v4.49z"/></svg>
               <span>linkedin.com/in/reuben-potgieter</span>
             </a>
           </li>
           <li>
             <span class="contact contact--static">
-              <svg class="ico" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2a7 7 0 0 0-7 7c0 5 7 13 7 13s7-8 7-13a7 7 0 0 0-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z"/></svg>
+              <svg class="ico" width="16" height="16" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2a7 7 0 0 0-7 7c0 5 7 13 7 13s7-8 7-13a7 7 0 0 0-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z"/></svg>
               Cape Town, South Africa · open to remote
             </span>
           </li>
         </ul>
 
         <div class="hero__actions">
-          <a class="btn btn--primary" href="https://github.com/ReubenP007" rel="noopener" target="_blank">View GitHub</a>
+          <a class="btn btn--primary" href="#samy">View the work</a>
           <button type="button" class="btn btn--ghost" data-print>Save as PDF</button>
         </div>
       </div>
+
+      <figure class="hero__portrait" aria-hidden="false">
+        <div class="portrait__frame">
+          <img class="portrait__img" src="assets/profile.jpg" width="380" height="475"
+               alt="Portrait of Reuben Potgieter" loading="eager" decoding="async">
+        </div>
+        <figcaption class="portrait__caption">
+          <span>REUBEN POTGIETER</span>
+          <span>CPT · ZA</span>
+        </figcaption>
+      </figure>
+    </div>
+
+    <div class="hero__ruler" aria-hidden="true">
+      <span class="ruler__label">TC 00:00:00:00</span>
+      <span class="ruler__label ruler__label--right">SCN 01 · TK 01</span>
     </div>
   </header>
 
   <main id="main">
 
-    <section class="section" id="about" aria-labelledby="about-h">
-      <h2 class="section__title" id="about-h"><span class="section__num">01</span> About</h2>
-      <div class="prose">
-        <p>
-          I'm a self-directed engineer who moved from nearly a decade in media production into
-          full-stack AI automation. At <strong>Team5pm</strong> I'm the sole architect and owner of
-          <strong>SAMY&nbsp;ENGINE</strong>, a production multi-module AI video platform used internally
-          and by external media clients — I own the whole stack: infrastructure, backend automation,
-          AI/LLM integration, the data layer, and client-facing frontends.
-        </p>
-        <p>
-          I hold two degrees, in film and in software engineering, and the blend shows in how I work:
-          product-minded about the output, rigorous about the system underneath. I joined Team5pm when
-          it was three people and helped scale it to twenty, so I'm comfortable owning ambiguous problems
-          end to end — and finishing what I start.
-        </p>
+    <!-- ============================== 01 SAMY ENGINE ===================== -->
+    <section class="section" id="samy" aria-labelledby="samy-h">
+      <header class="sec__head" data-reveal>
+        <span class="sec__num">01</span>
+        <h2 class="sec__title" id="samy-h">SAMY ENGINE</h2>
+        <span class="sec__rule" aria-hidden="true"></span>
+        <span class="sec__note">CASE STUDY · 2022 → PRESENT</span>
+      </header>
+
+      <p class="lede" data-reveal>
+        A production, multi-module AI video-production platform — automating footage
+        indexing, semantic clip search, compilation briefs, subtitle localisation and
+        audio mixing for internal teams and external media clients.
+        <strong>Sole architect and lead engineer</strong>: infrastructure, backend
+        automation, AI/LLM integration, data layer and client-facing frontends.
+      </p>
+
+      <div class="stats" data-reveal>
+        <div class="stat">
+          <span class="stat__value">07</span>
+          <span class="stat__label">modules in production</span>
+        </div>
+        <div class="stat">
+          <span class="stat__value">311</span>
+          <span class="stat__label">scene validation set for semantic search</span>
+        </div>
+        <div class="stat">
+          <span class="stat__value">02</span>
+          <span class="stat__label">customised external client deployments</span>
+        </div>
+        <div class="stat">
+          <span class="stat__value">00</span>
+          <span class="stat__label">downtime in full production infra migration</span>
+        </div>
+      </div>
+
+      <figure class="diagram" data-reveal>
+        <div class="diagram__scroll">
+          <svg class="diagram__svg" viewBox="0 0 960 552" role="img"
+               aria-label="SAMY ENGINE architecture: footage flows through the Index module into structured scene data, then through the Compilation module into timeline data, which a human editor refines with Subtitle/Localisation and Sound Mix modules before delivery. Adjacent modules: Sonas AI UGC, Studio Intake, Capacity. Everything runs on a self-hosted infrastructure rail and a multi-provider AI model rail.">
+            <defs>
+              <pattern id="bp-grid" width="40" height="40" patternUnits="userSpaceOnUse">
+                <path d="M40 0H0v40" fill="none" class="d-grid"/>
+              </pattern>
+              <marker id="arr" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+                <path d="M0 0L8 4L0 8z" class="d-arrow"/>
+              </marker>
+            </defs>
+
+            <rect x="1" y="1" width="958" height="550" class="d-frame"/>
+            <rect x="1" y="1" width="958" height="550" fill="url(#bp-grid)"/>
+
+            <!-- legend -->
+            <g class="d-legend">
+              <rect x="30" y="24" width="10" height="10" class="d-sw d-sw--ai"/>
+              <text x="48" y="33">AI MODULE</text>
+              <rect x="140" y="24" width="10" height="10" class="d-sw d-sw--human"/>
+              <text x="158" y="33">HUMAN IN THE LOOP</text>
+              <rect x="312" y="24" width="10" height="10" class="d-sw d-sw--data"/>
+              <text x="330" y="33">DATA ARTIFACT</text>
+              <text x="930" y="33" text-anchor="end" class="d-legend__id">SAMY ENGINE — SYSTEM MAP</text>
+            </g>
+
+            <!-- row A: ingest pipeline -->
+            <g class="d-node d-node--data">
+              <rect x="30" y="70" width="128" height="52" rx="3"/>
+              <text x="94" y="100">CONTENT POOL</text>
+            </g>
+            <line x1="158" y1="96" x2="196" y2="96" class="d-flow" marker-end="url(#arr)"/>
+            <g class="d-node d-node--ai">
+              <rect x="200" y="70" width="120" height="52" rx="3"/>
+              <text x="260" y="100">INDEX</text>
+            </g>
+            <text x="260" y="138" class="d-sub">LONG-FORM · RAW · SHORT-FORM</text>
+            <line x1="320" y1="96" x2="358" y2="96" class="d-flow" marker-end="url(#arr)"/>
+            <g class="d-node d-node--data">
+              <rect x="362" y="70" width="128" height="52" rx="3"/>
+              <text x="426" y="100">SCENE DATA</text>
+            </g>
+            <line x1="490" y1="96" x2="528" y2="96" class="d-flow" marker-end="url(#arr)"/>
+            <g class="d-node d-node--ai">
+              <rect x="532" y="70" width="140" height="52" rx="3"/>
+              <text x="602" y="100">COMPILATION</text>
+            </g>
+            <text x="602" y="138" class="d-sub">SPOTTING · BEST OF · ASSEMBLY · SCRIPTING</text>
+            <line x1="672" y1="96" x2="710" y2="96" class="d-flow" marker-end="url(#arr)"/>
+            <g class="d-node d-node--data">
+              <rect x="714" y="70" width="140" height="52" rx="3"/>
+              <text x="784" y="100">TIMELINE DATA</text>
+            </g>
+
+            <!-- elbow: timeline data down to edit -->
+            <path d="M784 122v36H125v28" fill="none" class="d-flow" marker-end="url(#arr)"/>
+
+            <!-- row B: finishing pipeline -->
+            <g class="d-node d-node--human">
+              <rect x="30" y="190" width="190" height="52" rx="3"/>
+              <text x="125" y="220">EDIT — HUMAN</text>
+            </g>
+            <line x1="220" y1="216" x2="266" y2="216" class="d-flow" marker-end="url(#arr)"/>
+            <g class="d-node d-node--ai">
+              <rect x="270" y="190" width="180" height="52" rx="3"/>
+              <text x="360" y="220">SUBTITLE / LOCALISE</text>
+            </g>
+            <line x1="450" y1="216" x2="496" y2="216" class="d-flow" marker-end="url(#arr)"/>
+            <g class="d-node d-node--ai">
+              <rect x="500" y="190" width="130" height="52" rx="3"/>
+              <text x="565" y="220">SOUND MIX</text>
+            </g>
+            <line x1="630" y1="216" x2="676" y2="216" class="d-flow" marker-end="url(#arr)"/>
+            <g class="d-node d-node--human">
+              <rect x="680" y="190" width="130" height="52" rx="3"/>
+              <text x="745" y="220">DELIVERY</text>
+            </g>
+
+            <!-- row C: adjacent modules + note -->
+            <text x="30" y="298" class="d-rowlabel">ADJACENT MODULES</text>
+            <g class="d-node d-node--ai">
+              <rect x="30" y="310" width="150" height="48" rx="3"/>
+              <text x="105" y="338">SONAS — AI UGC</text>
+            </g>
+            <g class="d-node d-node--ai">
+              <rect x="210" y="310" width="160" height="48" rx="3"/>
+              <text x="290" y="338">STUDIO INTAKE</text>
+            </g>
+            <text x="290" y="374" class="d-sub">SLACK → SHEETS → N8N → LINEAR</text>
+            <g class="d-node d-node--ai">
+              <rect x="400" y="310" width="130" height="48" rx="3"/>
+              <text x="465" y="338">CAPACITY</text>
+            </g>
+            <g class="d-note">
+              <line x1="590" y1="306" x2="590" y2="362" class="d-note__bar"/>
+              <text x="604" y="322">MODULE-ISOLATED BY DESIGN —</text>
+              <text x="604" y="338">CLIENT-SPECIFIC LOGIC NEVER</text>
+              <text x="604" y="354">CROSS-CONTAMINATES SHARED PIPELINES.</text>
+            </g>
+
+            <!-- rails -->
+            <g class="d-rail">
+              <rect x="30" y="408" width="900" height="46" rx="3"/>
+              <text x="48" y="436" class="d-rail__label">INFRA</text>
+              <text x="480" y="436" text-anchor="middle" class="d-rail__items">HETZNER · DOCKER / UBUNTU · TRAEFIK · CLOUDFLARE · N8N · SUPABASE / POSTGRES · GCS</text>
+            </g>
+            <g class="d-rail">
+              <rect x="30" y="474" width="900" height="46" rx="3"/>
+              <text x="48" y="502" class="d-rail__label">MODELS</text>
+              <text x="480" y="502" text-anchor="middle" class="d-rail__items">GEMINI · CLAUDE (OPENROUTER) · ELEVENLABS STT · LOCAL: GEMMA / WHISPER LARGE-V3</text>
+            </g>
+          </svg>
+        </div>
+        <figcaption class="diagram__caption">
+          System map — talent &times; machine. AI modules do the repetitive interpretation at scale;
+          humans stay in the loop where craft decides the cut.
+        </figcaption>
+      </figure>
+
+      <div class="modules" data-reveal>
+        <article class="module">
+          <header><span class="module__id">M-01</span><h3 class="module__title">Index</h3></header>
+          <p>AI interpretation of raw footage at archive scale — timecoded scene data,
+             descriptions and searchable criteria a human could never label by hand.</p>
+        </article>
+        <article class="module">
+          <header><span class="module__id">M-02</span><h3 class="module__title">Compilation</h3></header>
+          <p>Conversational briefing over indexed footage — outputs edit-ready sequence
+             data and eliminates manual spotting entirely.</p>
+        </article>
+        <article class="module">
+          <header><span class="module__id">M-03</span><h3 class="module__title">Subtitle / Localisation</h3></header>
+          <p>Context-aware subtitles and translations — local slang, client grammar,
+             market-sensitive phrasing — delivered at multi-market scale.</p>
+        </article>
+        <article class="module">
+          <header><span class="module__id">M-04</span><h3 class="module__title">Sonas — AI UGC</h3></header>
+          <p>A fully AI-generated digital creator: a production testbed for AI-native
+             social content and human–machine creative workflows.</p>
+        </article>
+        <article class="module">
+          <header><span class="module__id">M-05</span><h3 class="module__title">Sound Mix</h3></header>
+          <p>Automated audio post — consistent, brief-driven mixes for high-volume
+             output without a mixing bottleneck.</p>
+        </article>
+        <article class="module">
+          <header><span class="module__id">M-06</span><h3 class="module__title">Studio Intake</h3></header>
+          <p>End-to-end intake automation: Slack &rarr; Google Sheets staging &rarr; n8n &rarr;
+             Linear as the single system of record.</p>
+        </article>
+        <article class="module">
+          <header><span class="module__id">M-07</span><h3 class="module__title">Capacity</h3></header>
+          <p>Studio workload and resource planning across the module pipeline.</p>
+        </article>
+        <div class="module module--filler" aria-hidden="true">
+          <span class="module__filler-label">TALENT &times; MACHINE</span>
+        </div>
+      </div>
+
+      <div class="clients" data-reveal>
+        <article class="client">
+          <header class="client__head">
+            <h3 class="client__name">Banijay</h3>
+            <span class="client__tag">CUSTOMISED FORK</span>
+          </header>
+          <p>Forked, customised deployment for the international media group — a
+             per-client customisation log keeps the fork honest against mainline.</p>
+        </article>
+        <article class="client">
+          <header class="client__head">
+            <h3 class="client__name">Prime</h3>
+            <span class="client__tag">AIR-GAPPED / ON-PREM</span>
+          </header>
+          <p>Architected an air-gapped, on-prem spec for a security-sensitive client —
+             fully local models (Gemma, Whisper Large-v3), zero external API calls.</p>
+        </article>
+      </div>
+
+      <div class="fieldnotes" data-reveal>
+        <h3 class="fieldnotes__title">Field notes</h3>
+        <ul class="fieldnotes__list">
+          <li><span class="fn__marker">FN-01</span>Two-key idempotency — stable identity + content hash — with dedup views, so
+              production workflows never process the same job twice.</li>
+          <li><span class="fn__marker">FN-02</span>Dynamic per-job model routing across Gemini, Claude (via OpenRouter) and
+              ElevenLabs STT, with explicit MAX_TOKENS / <code>finishReason</code> safeguards and
+              endpoint-correct thinking config.</li>
+          <li><span class="fn__marker">FN-03</span>Semantic scene search validated on a 311-scene set: 100% recall (~65%
+              precision) on one query class, 93% recall on another — real footage, honest numbers.</li>
+          <li><span class="fn__marker">FN-04</span>Zero-loss production migration Hostinger &rarr; Hetzner: Cloudflare DNS cutover
+              (proxied/direct split), block-storage volumes, Traefik across dev / sandbox / prod.</li>
+          <li><span class="fn__marker">FN-05</span>Closed the Docker-bypasses-UFW gap with network-level Hetzner Cloud Firewall
+              rules; hardened self-hosted n8n on Docker/Ubuntu with managed TLS.</li>
+          <li><span class="fn__marker">FN-06</span>Multi-tenant Supabase/Postgres schemas with per-client isolation,
+              upsert/conflict strategies, and Google Sheets as an operational, client-facing data layer.</li>
+        </ul>
       </div>
     </section>
 
+    <!-- ============================== 02 EXPERIENCE ====================== -->
+    <section class="section" id="experience" aria-labelledby="exp-h">
+      <header class="sec__head" data-reveal>
+        <span class="sec__num">02</span>
+        <h2 class="sec__title" id="exp-h">Experience</h2>
+        <span class="sec__rule" aria-hidden="true"></span>
+        <span class="sec__note">2015 → PRESENT</span>
+      </header>
+
+      <article class="role" data-reveal>
+        <header class="role__head">
+          <div>
+            <h3 class="role__title">AI Workflow Developer <span class="role__at">·</span> <span class="role__org">Team5pm</span></h3>
+            <p class="role__meta">Cape Town · grew from Senior Video Editor / Content Creative / IT Specialist into full-stack AI automation</p>
+          </div>
+          <p class="role__dates">APR 2022 — PRESENT</p>
+        </header>
+        <p class="role__scope">
+          Sole architect and lead engineer of <strong>SAMY&nbsp;ENGINE</strong> — full case
+          study above. Joined when the company was three people; helped scale it to twenty.
+        </p>
+        <ul class="bullets">
+          <li><strong>Engineering practice:</strong> administered the GitHub org — branch-protection
+              rulesets, PR/approval gates, main/dev/sandbox flow — and ran a 12-project Linear
+              workspace as the single system of record.</li>
+          <li><strong>Agentic tooling:</strong> built MCP integrations driving n8n, Supabase and
+              Linear programmatically.</li>
+          <li><strong>Automation at scale:</strong> engineered production n8n workflows to be
+              deterministic, schema-stable and idempotent.</li>
+          <li><strong>Ownership:</strong> owned stack, roadmap and delivery end to end — from
+              Hetzner firewall rules to client-facing frontends.</li>
+        </ul>
+      </article>
+
+      <article class="role" data-reveal>
+        <header class="role__head">
+          <div>
+            <h3 class="role__title">Editor &amp; Colorist <span class="role__at">·</span> <span class="role__org">Penguin Films</span></h3>
+          </div>
+          <p class="role__dates">JAN 2020 — JAN 2022</p>
+        </header>
+        <ul class="bullets">
+          <li>Editor, colorist and graphics across broadcast and social content — elevating visual
+              quality and delivering high-impact projects on tight schedules.</li>
+        </ul>
+      </article>
+
+      <article class="role" data-reveal>
+        <header class="role__head">
+          <div><h3 class="role__title">Earlier — creative &amp; entrepreneurial</h3></div>
+          <p class="role__dates">2015 — 2021</p>
+        </header>
+        <ul class="bullets">
+          <li><strong>Reuson Studios</strong> — Cinematographer / Director / Editor / Producer:
+              music videos, advertisements and brand content.</li>
+          <li><strong>Vapeseid (Pty) Ltd</strong> — Co-founder: co-founded a manufacturing startup,
+              leading product design and marketing.</li>
+        </ul>
+      </article>
+    </section>
+
+    <!-- ============================== 03 CAPABILITIES ==================== -->
     <section class="section" id="skills" aria-labelledby="skills-h">
-      <h2 class="section__title" id="skills-h"><span class="section__num">02</span> Skills</h2>
-      <div class="skills">
+      <header class="sec__head" data-reveal>
+        <span class="sec__num">03</span>
+        <h2 class="sec__title" id="skills-h">Capabilities</h2>
+        <span class="sec__rule" aria-hidden="true"></span>
+        <span class="sec__note">STACK &amp; PRACTICE</span>
+      </header>
+
+      <div class="skills" data-reveal>
         <div class="skillgroup">
           <h3 class="skillgroup__label">Languages</h3>
           <ul class="chips"><li>JavaScript (Node.js)</li><li>Python</li><li>SQL</li><li>Bash</li></ul>
@@ -140,97 +443,62 @@
       </div>
     </section>
 
-    <section class="section" id="experience" aria-labelledby="exp-h">
-      <h2 class="section__title" id="exp-h"><span class="section__num">03</span> Experience</h2>
+    <!-- ============================== 04 FILM ============================ -->
+    <section class="section" id="film" aria-labelledby="film-h">
+      <header class="sec__head" data-reveal>
+        <span class="sec__num">04</span>
+        <h2 class="sec__title" id="film-h">Film</h2>
+        <span class="sec__rule" aria-hidden="true"></span>
+        <span class="sec__note">THE CREATIVE FOUNDATION</span>
+      </header>
 
-      <article class="role">
-        <header class="role__head">
-          <div>
-            <h3 class="role__title">AI Workflow Developer <span class="role__at">·</span> <span class="role__org">Team5pm</span></h3>
-            <p class="role__meta">Cape Town · grew from Senior Video Editor / Content Creative / IT Specialist into full-stack AI automation</p>
-          </div>
-          <p class="role__dates">Apr 2022 – Present</p>
-        </header>
-        <p class="role__scope">
-          Sole architect and lead engineer of <strong>SAMY&nbsp;ENGINE</strong> — a production, multi-module
-          AI video-production platform serving internal teams and external media clients. Full ownership of
-          infrastructure, backend automation, AI/LLM integration, data layer, and client-facing frontends.
+      <div class="film" data-reveal>
+        <p class="film__body">
+          Nearly a decade of editing, color and post-production — for clients including
+          <strong>Amazon Prime</strong>, <strong>PokerStars</strong> and
+          <strong>Volkswagen</strong>. The craft the engineering grew out of: I build
+          automation for editors because I was one.
         </p>
-        <ul class="bullets">
-          <li><strong>Architecture &amp; ownership:</strong> Designed a module-isolated platform (Index, Compilation, Subtitle/Localisation, Sonas UGC, Sound Mix, Studio Intake, Capacity) so client-specific logic never cross-contaminates shared pipelines — owning stack, roadmap, and delivery.</li>
-          <li><strong>Infrastructure migration:</strong> Led a full production migration from Hostinger to Hetzner with no service loss — DNS cutover via Cloudflare (proxied/direct split), block-storage volumes, and Traefik reverse proxy across dev/sandbox/prod.</li>
-          <li><strong>DevOps &amp; security:</strong> Self-hosted and hardened n8n on Docker/Ubuntu; closed the Docker-bypasses-UFW gap with network-level Hetzner Cloud Firewall rules, and managed TLS and multi-environment deploy routing.</li>
-          <li><strong>AI / LLM engineering:</strong> Orchestrated multiple providers (Google Gemini, Anthropic Claude via OpenRouter, ElevenLabs STT) with dynamic per-job model routing, plus inference safeguards (explicit MAX_TOKENS / <code>finishReason</code> handling, endpoint-correct thinking config).</li>
-          <li><strong>Semantic search:</strong> Built a semantic scene-detection and search pipeline, validated on a 311-scene test set (100% recall / ~65% precision on one query class, 93% recall on another) against real footage.</li>
-          <li><strong>Automation at scale:</strong> Engineered production n8n workflows to be deterministic, schema-stable, and idempotent — with a two-key idempotency model (stable identity + content-hash) and dedup views that prevent duplicate processing.</li>
-          <li><strong>Studio Intake:</strong> Automated intake end to end — Slack → Google Sheets staging → n8n → Linear as the system of record.</li>
-          <li><strong>Data engineering:</strong> Designed multi-tenant Supabase/Postgres schemas with per-client isolation, upsert/conflict strategies, and dedup views; integrated Google Sheets as an operational DB and client-facing output layer.</li>
-          <li><strong>Client delivery:</strong> Shipped a forked, customised deployment for <strong>Banijay</strong> (international media group) with a per-client customisation log, and architected an <strong>air-gapped / on-prem</strong> spec for a security-sensitive client (<strong>Prime</strong>) using fully local models (Gemma, Whisper Large-v3) with zero external API calls.</li>
-          <li><strong>Engineering practice:</strong> Administered the GitHub org (branch-protection rulesets, PR/approval gates, main/dev/sandbox flow), built MCP integrations driving n8n/Supabase/Linear programmatically, and ran a 12-project Linear workspace as the single system of record.</li>
-        </ul>
-      </article>
-
-      <article class="role">
-        <header class="role__head">
-          <div>
-            <h3 class="role__title">Editor &amp; Colorist <span class="role__at">·</span> <span class="role__org">Penguin Films</span></h3>
-          </div>
-          <p class="role__dates">Jan 2020 – Jan 2022</p>
-        </header>
-        <ul class="bullets">
-          <li>Editor, colorist and graphics across broadcast and social content — elevating visual quality and delivering high-impact projects on tight schedules.</li>
-        </ul>
-      </article>
-
-      <article class="role role--compact">
-        <header class="role__head">
-          <div><h3 class="role__title">Earlier — creative &amp; entrepreneurial</h3></div>
-          <p class="role__dates">2015 – 2021</p>
-        </header>
-        <ul class="bullets">
-          <li><strong>Reuson Studios</strong> — Cinematographer / Director / Editor / Producer: music videos, advertisements, and brand content.</li>
-          <li><strong>Vapeseid (Pty) Ltd</strong> — Co-founder: co-founded a manufacturing startup, leading product design and marketing.</li>
-        </ul>
-      </article>
-    </section>
-
-    <section class="section" id="projects" aria-labelledby="proj-h">
-      <h2 class="section__title" id="proj-h"><span class="section__num">04</span> Projects</h2>
-      <div class="cards">
-        <article class="card">
-          <header class="card__head">
-            <h3 class="card__title">SAMY ENGINE</h3>
-            <span class="tag">Proprietary · internal + client platform</span>
-          </header>
-          <p class="card__body">
-            A multi-module AI video-production platform that automates footage logging, semantic clip search,
-            compilation briefs, subtitle localisation, audio mixing, and AI content generation. Modules: Index
-            (Long-Form / RAW / Short-Form), Compilation (Spotting, Best&nbsp;Of, Assembly, Scripting),
-            Subtitle / Localisation, Sonas (AI UGC), Sound Mix, Studio Intake, and Capacity.
-          </p>
-          <p class="card__role"><strong>Role:</strong> Sole architect &amp; lead engineer — end-to-end ownership. Shipped customised deployments for Banijay and an air-gapped build for Prime.</p>
-        </article>
-        <article class="card">
-          <header class="card__head">
-            <h3 class="card__title">Creative portfolio &amp; showreel</h3>
-            <span class="tag">Video / editing</span>
-          </header>
-          <p class="card__body">
-            Editing and post-production work for clients including Amazon Prime, PokerStars and Volkswagen —
-            the creative foundation the engineering grew out of.
-          </p>
-          <p class="card__role">
-            <a href="https://reubenpotgieter.my.canva.site/" rel="noopener" target="_blank">Portfolio</a>
-            <span aria-hidden="true">·</span>
-            <a href="https://youtu.be/Dz4N4lQIktI" rel="noopener" target="_blank">Showreel</a>
-          </p>
-        </article>
+        <div class="film__actions">
+          <a class="btn btn--primary" href="https://youtu.be/Dz4N4lQIktI" rel="noopener" target="_blank">Watch showreel</a>
+          <a class="btn btn--ghost" href="https://reubenpotgieter.my.canva.site/" rel="noopener" target="_blank">Creative portfolio</a>
+        </div>
       </div>
     </section>
 
+    <!-- ============================== 05 ABOUT =========================== -->
+    <section class="section" id="about" aria-labelledby="about-h">
+      <header class="sec__head" data-reveal>
+        <span class="sec__num">05</span>
+        <h2 class="sec__title" id="about-h">About</h2>
+        <span class="sec__rule" aria-hidden="true"></span>
+        <span class="sec__note">THE STORY</span>
+      </header>
+
+      <div class="prose" data-reveal>
+        <p>
+          I'm a self-directed engineer who moved from nearly a decade in media production into
+          full-stack AI automation. I hold two degrees — film and software engineering — and the
+          blend shows in how I work: product-minded about the output, rigorous about the system
+          underneath.
+        </p>
+        <p>
+          I joined Team5pm when it was three people and helped scale it to twenty, so I'm
+          comfortable owning ambiguous problems end to end — and finishing what I start.
+        </p>
+      </div>
+    </section>
+
+    <!-- ============================== 06 EDUCATION ======================= -->
     <section class="section" id="education" aria-labelledby="edu-h">
-      <h2 class="section__title" id="edu-h"><span class="section__num">05</span> Education &amp; languages</h2>
-      <ul class="edu">
+      <header class="sec__head" data-reveal>
+        <span class="sec__num">06</span>
+        <h2 class="sec__title" id="edu-h">Education</h2>
+        <span class="sec__rule" aria-hidden="true"></span>
+        <span class="sec__note">&amp; LANGUAGES</span>
+      </header>
+
+      <ul class="edu" data-reveal>
         <li class="edu__item">
           <div><span class="edu__qual">BSc Software Engineering</span> <span class="edu__org">Eduvos</span></div>
           <span class="edu__year">2023</span>
@@ -244,12 +512,15 @@
           <span class="edu__year">2013</span>
         </li>
       </ul>
-      <p class="edu__langs"><strong>Languages:</strong> English, Afrikaans &nbsp;·&nbsp; <strong>References:</strong> available on request</p>
+      <p class="edu__langs" data-reveal><strong>Languages:</strong> English, Afrikaans &nbsp;·&nbsp; <strong>References:</strong> available on request</p>
     </section>
   </main>
 
   <footer class="foot">
-    <p>© <span data-year>2026</span> Reuben Potgieter · Cape Town, South Africa</p>
+    <div class="foot__inner">
+      <p>© <span data-year>2026</span> REUBEN POTGIETER — CAPE TOWN, SOUTH AFRICA</p>
+      <p class="foot__note">BUILT BY HAND · NO FRAMEWORK · NO BUILD STEP</p>
+    </div>
   </footer>
 
   <script src="script.js" defer></script>
