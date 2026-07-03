@@ -972,6 +972,51 @@ a.contact:hover .ico { color: var(--amber); }
   text-transform: uppercase;
   color: var(--muted);
 }
+.wordmarks img {
+  height: 30px;
+  width: auto;
+  filter: grayscale(1) invert(1);
+  opacity: .8;
+  transition: opacity .2s ease;
+}
+.wordmarks img:hover { opacity: 1; }
+
+/* ---------- Video frame --------------------------------------------------- */
+.videoframe { margin: 0 0 2.4rem; }
+.videoframe__box {
+  position: relative;
+  border: 1px solid var(--border-strong);
+  padding: 8px;
+  background: var(--bg-2);
+}
+.videoframe__box::before,
+.videoframe__box::after {
+  content: "";
+  position: absolute;
+  width: 14px; height: 14px;
+  border-color: var(--amber);
+  border-style: solid;
+}
+.videoframe__box::before { top: -1px; left: -1px; border-width: 2px 0 0 2px; }
+.videoframe__box::after { bottom: -1px; right: -1px; border-width: 0 2px 2px 0; }
+.videoframe__box iframe {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border: 0;
+  background: #000;
+}
+.videoframe__caption {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-top: .55rem;
+  font-family: var(--font-mono);
+  font-size: .68rem;
+  letter-spacing: .1em;
+  color: var(--faint);
+}
+.videoframe__caption strong { color: var(--muted); font-weight: 600; letter-spacing: .14em; }
 
 /* ---------- Reveal on scroll (progressive enhancement) ------------------ */
 @media (prefers-reduced-motion: no-preference) {
@@ -1040,7 +1085,7 @@ a.contact:hover .ico { color: var(--amber); }
   .stats { grid-template-columns: repeat(4, 1fr); margin-bottom: 1.2rem; }
   .modules { grid-template-columns: repeat(3, 1fr); }
   .stat, .module { border: 1px solid #ccc; }
-  .nudge, .guides, .gallery, .wordmarks, .pagehead__rule { display: none !important; }
+  .nudge, .guides, .gallery, .wordmarks, .videoframe, .pagehead__rule { display: none !important; }
   .pagehead { margin: 0; padding: 0 0 .6rem; }
   .pagehead__title { font-size: 20pt; }
   .stat { padding: .6rem .8rem; }
