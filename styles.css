@@ -738,20 +738,24 @@ a.contact:hover .ico { color: var(--amber); }
 .edu__item {
   display: flex;
   justify-content: space-between;
+  align-items: baseline;
   gap: 1rem;
   padding: .7rem 0;
   border-bottom: 1px solid var(--border);
-  flex-wrap: wrap;
 }
+.edu__item > div { flex: 1 1 auto; min-width: 0; }
 .edu__item:last-child { border-bottom: 0; }
 .edu__qual { font-weight: 600; }
 .edu__org { color: var(--amber); }
 .edu__note { color: var(--muted); }
+.edu__note--block { display: block; margin-top: .25rem; font-size: .92em; }
 .edu__year {
   font-family: var(--font-mono);
   font-size: .78rem;
   letter-spacing: .1em;
   color: var(--muted);
+  flex-shrink: 0;
+  white-space: nowrap;
 }
 .edu__langs { margin: 1.2rem 0 0; color: var(--muted); font-size: .92rem; }
 .edu__langs strong { color: var(--text); }
