@@ -379,7 +379,6 @@ a.contact:hover .ico { color: var(--amber); }
   font-size: 1.15rem;
   line-height: 1.7;
   color: var(--muted);
-  max-width: 72ch;
 }
 .lede strong { color: var(--text); }
 
@@ -680,8 +679,15 @@ a.contact:hover .ico { color: var(--amber); }
   color: var(--muted);
   white-space: nowrap;
 }
-.role__scope { margin: .8rem 0 .4rem; color: var(--muted); max-width: 72ch; }
+.role__scope { margin: .8rem 0 .4rem; color: var(--muted); }
 .role__scope strong { color: var(--text); }
+.role__scope--callout {
+  margin: 1rem 0 1.4rem;
+  padding: .95rem 1.15rem;
+  background: var(--amber-soft);
+  border: 1px solid var(--border-strong);
+  border-left: 3px solid var(--amber);
+}
 .bullets { margin: .6rem 0 0; padding-left: 1.15rem; }
 .bullets li { margin: .45rem 0; color: var(--muted); }
 .bullets li strong { color: var(--text); font-weight: 600; }
@@ -730,7 +736,7 @@ a.contact:hover .ico { color: var(--amber); }
 .film__actions { display: flex; gap: .8rem; flex-wrap: wrap; }
 
 /* ---------- Prose / About ------------------------------------------------ */
-.prose p { margin: 0 0 1rem; max-width: 72ch; color: var(--muted); }
+.prose p { margin: 0 0 1rem; color: var(--muted); }
 .prose p:last-child { margin-bottom: 0; }
 
 /* ---------- Education ---------------------------------------------------- */
